@@ -42,10 +42,57 @@
 // })
 
 //===============================================innerhtml, innertext,textcontent=======================================================================//
-const paragraph = document.querySelector('p')
-console.log(paragraph.innerText);
-// console.log(paragraph.innerHTML);
-// const nameShows =document.querySelector('[name = "shweta"]')
+// const paragraph = document.querySelector('p')
+// console.log(paragraph.innerText);
+// // console.log(paragraph.innerHTML);
+// // const nameShows =document.querySelector('[name = "shweta"]')
 
-document.querySelector('[data-name="shweta"]').getAttribute('data-name');
-const setA = document.querySelector('h1').setAttribute('title','hii')
+// document.querySelector('[data-name="shweta"]').getAttribute('data-name');
+// const setA = document.querySelector('h1').setAttribute('title','hii')
+
+
+// ==============================================styling in js=====================
+const h1 = document.querySelector('h1')
+h1.style.color = "pink"
+// const allLink = document.querySelector('a')
+// for(let i = 0; i<=allLink.length;i++){
+//     allLink[i].style.color="green"
+// }
+
+const allLinks = document.querySelectorAll('a');
+for (let link of allLinks) {
+    // link.style.color = "green";
+    // link.style.textDecoration="none"
+    // link.style.fontWeight=300
+    // link.style.fontFamily="cursive"
+
+    // link.className="green-link"
+    // link.classList.remove('green-link')
+    link.classList.add('green-link')
+    link.classList.add('outer-link')
+    // link.classList.add('hidden')
+
+}
+
+//================================accessing parent element============================================
+// const parentAccess = document.querySelector("body > p:nth-child(4) > a:nth-child(5)")
+// console.log(parentAccess.parentElement)//p
+// console.log(parentAccess.parentElement.parentElement)//body
+// console.log(parentAccess.parentElement.parentElement.parentElement)//html
+// console.log(parentAccess.parentElement.parentElement.parentElement.parentElement)//null
+// console.log(parentAccess.parentElement.parentElement.parentElement.parentNode)//#document
+
+
+//================================accessing child element============================================
+// const childAccess = document.querySelector('body')
+// console.log(childAccess);
+// console.log(childAccess.children);
+
+//================================accessing siblings ============================================
+
+const siblingAccess = document.querySelector('p')
+console.log(siblingAccess);
+console.log(siblingAccess.nextElementSibling);
+
+
+
